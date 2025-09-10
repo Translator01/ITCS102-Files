@@ -13,18 +13,18 @@ if genre == "action":
             print("We recommend 'You Need is Kill'!")
         elif short == "2010s":
             print("We recommend 'Tokyo Ghoul'!")
-        if action == "medium":
-            medium = input("Which decade do you prefer? (2000s, 2010s)").strip().lower()
-            if medium == "2000s":
-                print("We recommend 'Death Note'!")
-            elif medium == "2010s":
-                print("We recommend 'Assassination Classroom'!")
-        if action == "long":
-            long = input("Which decade do you prefer? (2000s, 2010s)").strip().lower()
-            if long == "2000s":
-                print("We recommend 'One Piece'!")
-            elif long == "2010s":
-                print("We recommend 'The Seven Deadly Sins'!")
+    elif action == "medium":
+        medium = input("Which decade do you prefer? (2000s, 2010s)").strip().lower()
+        if medium == "2000s":
+            print("We recommend 'Death Note'!")
+        elif medium == "2010s":
+            print("We recommend 'Assassination Classroom'!")
+    elif action == "long":
+        long = input("Which decade do you prefer? (2000s, 2010s)").strip().lower()
+        if long == "2000s":
+            print("We recommend 'One Piece'!")
+        elif long == "2010s":
+            print("We recommend 'The Seven Deadly Sins'!")
 elif genre == "isekai":
     isekai = input("How long should the manga be? (Short, Medium, Long)").strip().lower()
     if isekai == "short":
