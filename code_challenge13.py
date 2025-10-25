@@ -1,6 +1,6 @@
 name = input("Input your name here ---> ")
 print("Hi", name, "Welcome to the ODD NUMBER SUMMATION PROGRAM")
-print("Mechanics: You may enter random number. Then, press 0 if you want the program to stop\n")
+print("Enter any random number. Press 0 if you want the program to stop\n")
 
 num = True
 
@@ -17,7 +17,7 @@ while num == True:
         odd += str(val) + " "
         continue
     elif  val == 0:
-        print("Program stops. ")
+        print("Program END. ")
         break
 
     else:
