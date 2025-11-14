@@ -14,17 +14,13 @@ ln = 'Balmaceda'
 
 print(f"My name is {fn} {mn} {ln} ")
 
-
-
-#For Uppercase 
+#For Upper & Lower Case
 fnm = 'Donn Romuelle'
 mnm = 'B' 
 lnm = 'Balmaceda' 
 
 print(f"My name is {fnm.upper()} {mnm.upper()} {lnm.upper()} {10 + 8}") 
 print(f"My name is {fnm.lower()} {mnm.lower()} {lnm.lower()} {10 + 8}") 
-
-
 
 #Summation
 sum = 0
