@@ -454,9 +454,18 @@ class sub_menu():
                 elif sub_choice == 'Q':
                     break
                 else:
+                    os.system('cls')
                     print('Invalid choice. Please try again.')
                     cls = input('Enter any key to continue...')
-                    os.system('cls')
                     continue
-            #elif choice == '2':
+            elif choice == '2':
+                print('You have slected the Dictionaries menu.')
+                print('==========================================')
+                print('Select one of the choices below: ')
+                print('1 - Creating a Dictionary')
+                print('2 - Accessing Dictionary Elements')
+                print('3 - Modifying a Dictionary')
+                print('Q - Quit to previous menu')
+                sub_choice = input('Enter your choice: ').upper()
+
 Main_Menu()
