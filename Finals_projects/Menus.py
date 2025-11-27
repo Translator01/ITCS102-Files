@@ -26,7 +26,7 @@ def Main_Menu():
             os.system('cls')
             sub_menu.loops_menu()
         elif choice == 'E':
-            print('E - Lists & Dictionaries (Coming Soon)')
+            sub_menu.List_and_Dictionaries_menu()
         elif choice == 'F':
             print('F - Functions (Coming Soon)')
         elif choice == 'Q':
@@ -467,5 +467,9 @@ class sub_menu():
                 print('3 - Modifying a Dictionary')
                 print('Q - Quit to previous menu')
                 sub_choice = input('Enter your choice: ').upper()
+                if sub_choice == '1':
+                    print('You have selected Dictionary Creation')
+                    print('=======================================')
+                    print('In dictionaries and list has commonalities in how we execute them when we create a dictionary we use curly braces {}, 
 
 Main_Menu()
