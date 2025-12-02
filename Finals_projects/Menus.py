@@ -262,6 +262,101 @@ def tuple():
     print('---------------------------------------------------')
     clear = input('Press ENTER to return to the Main Menu...')
 
+#Loops Example
+def for_loop():
+    print("----------- Example of a For Loop -----------")
+    print('---------------------------------------------')
+    print('for i in range(5): # This will output 1  to 4')
+    print("\tprint('i')")
+    print('Output:')
+    for i in range(5): # This will output 1 to 4
+        print (i)
+    print('---------------------------------------------')
+    clear = input('Press ENTER to return to the Main Menu...')
+
+def while_loop():
+    print('----------- Example of a While Loop -----------')
+    print('-----------------------------------------------')
+    print('clothes = True')
+    print('while clothes == True:')
+    print('\tisDirty = input("Is the clothes clean? (yes/no): ").lower()')
+    print("\tif isDirty == 'no':")
+    print('\t\tprint("Washing Continues")')
+    print('\t\tcontinue')
+    print('\telse:')
+    print('\t\tprint("Your clothes is clean")')
+    print('\t\tbreak')
+    print('Output:')
+    clothes = True
+
+    while clothes == True:
+        isDirty = input("Is the clothes clean? (yes/no): ").lower()
+        if isDirty == 'no':
+            print("Washing Continues")
+            continue
+        else:
+            print("Your clothes is clean")
+            break
+    print('---------------------------------------------')
+    clear = input('Press ENTER to return to the Main Menu...')
+
+def nested_for_loop():
+    print('----------- Example of a Nested For Loop -----------')
+    print('----------------------------------------------------')
+    print('adj = ["red", "big", "tasty"]')
+    print('fruits = ["apple", "banana", "cherry"]')
+    print('for x in adj:')
+    print('\tfor y in fruits:')
+    print('\t\tprint(x, y)')
+    print('Output:')
+    adj = ["red", "big", "tasty"]
+    fruits = ["apple", "banana", "cherry"]
+    for x in adj:
+        for y in fruits:
+            print(x, y)
+    print('----------------------------------------------------')
+    clear = input('Press ENTER to return to the Main Menu...')
+
+def nested_while_loop():
+    print('-------------- Example of a Nested While Loop ---------------')
+    print('-------------------------------------------------------------')
+    print('# Initialize the outer loop counter (rows)\
+        \ni = 1\
+        \n# Outer while loop (runs as long as i is less than or equal to 3)\
+        \nwhile i <= 3:\
+        \n\t# Initialize the inner loop counter (columns)\
+        \n\tj = 1\
+        \n\t# Inner while loop (runs as long as j is less than or equal to 3)\
+        \n\twhile j <= 3:\
+        \n\t# Print the current row and column number, formatted\
+        \n\t\tprint("Row {i}, Col {j}", end=" | ")\
+        \n\t# Increment the inner loop counter\
+        \n\tj += 1\
+        \n# After the inner loop finishes, print a new line for the next row\
+        \n print("\n")\
+        \n# Increment the outer loop counter\
+        \ni += 1')
+    print('Output:')
+    # Initialize the outer loop counter (rows)
+    i = 1
+    # Outer while loop (runs as long as i is less than or equal to 3)
+    while i <= 3:
+        # Initialize the inner loop counter (columns)
+        j = 1
+        # Inner while loop (runs as long as j is less than or equal to 3)
+        while j <= 3:
+        # Print the current row and column number, formatted
+            print(f"Row {i}, Col {j}", end=" | ")
+        # Increment the inner loop counter
+        j += 1
+    # After the inner loop finishes, print a new line for the next row
+    print("\n")
+    # Increment the outer loop counter
+    i += 1
+    print('-------------------------------------------------------------')
+    clear = input('Press ENTER to return to the Main Menu...')
+
+#Conditional statement Examples
 def simple_condi_statements():
     print('--- Example of simple conditional statements ---')
     print('------------------------------------------------')
@@ -282,24 +377,54 @@ def simple_condi_statements():
 def logical_condi_statements():
     print('--- Example of logical conditional statements ---')
     print('-------------------------------------------------')
-    print('score = int(input("Enter your score: "))')
+    print("score = int(input('Enter your score here: '))")
     print('if score >= 90:')
-    print('    print("Grade: A")')
+    print("\tprint('Grade: A')")
     print('elif score >= 80:')
-    print('    print("Grade: B")')
+    print("\tprint('Grade B:')")
+    print('elif score >= 70:')
+    print("\tprint('Grade: C')")
     print('else:')
-    print('    print("Grade: C or below")')
+    print("\tprint('Grade: F')")
     print('Output:')
-    score = int(input("Enter your score: "))
+    score = int(input('Enter your score here: '))
+
     if score >= 90:
         print("Grade: A")
     elif score >= 80:
         print("Grade: B")
+    elif score >= 70:
+        print("Grade: C")
     else:
-        print("Grade: C or below")
+        print("Grade: F")
     print('-------------------------------------------------')
     clear = input('Press ENTER to return to the Main Menu...')
 
+def nested_condi_statement():
+    print('--- Example of nested conditional statements ---')
+    print('------------------------------------------------')
+    print('age = int(input("Enter your age:"))')
+    print("has_license = input('Do you have a license(Y/N)')")
+    print('if age >= 18:')
+    print("\tif has_license == 'Y'")
+    print("\t\tprint('Eligible to drive')")
+    print("\telse:")
+    print("\t\tprint('Not eligible to drive')")
+    print('else:')
+    print("\tprint('Not old enough to drive')")
+    print('Output')
+    age = int(input('enter age:'))
+    has_license = input('Do you have a license(Y/N)')
+    if age >= 18:
+        if has_license == 'Y':
+            print("Eligible to drive")
+        else:
+            print("Not eligible to drive without a license")
+    else:
+        print("Not old enough to drive")
+    print('------------------------------------------------')
+    clear = input('Press ENTER to return to the Main Menu...')
 
-
-
+#Functions Example
+def function_example():
+    print

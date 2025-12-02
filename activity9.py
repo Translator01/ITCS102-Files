@@ -1,10 +1,10 @@
-identity = "mark"
+identity = "Donn"
 pin  = "0000"
 
-#print(identity == "mark")
-#print(pin == "0000")
-#print(identity == "mark") and (pin == "0000")
-#print(identity == "mark") or (pin == "0001")
-print(not((identity == "mark") or (pin == "0001")))
+print(identity == "Donn")
+print(pin == "0000")
+print(identity == "Donn") and (pin == "0000")
+print(identity == "Donn") or (pin == "0001")
+print(not((identity == "Donn") or (pin == "0001")))
 
 
