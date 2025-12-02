@@ -427,4 +427,23 @@ def nested_condi_statement():
 
 #Functions Example
 def function_example():
+    print('------ Def function Example ------')
+    print('----------------------------------')
+    print('def greet_person(name):')
+    print('\tprint(f"hello,{name}!!")')
+    print()
+    print('name = input("Enter your name: ")')
+    print('greet_person(name)')
+    
+    print('Output:')
+    
+    def greet_person(name):
+        print(f'hello,{name}!!')
+    
+    name = input('Enter your name here: ')
+    greet_person(name)
+    print('------------------------------------')
+    clear = input('Press ENTER to return to the Main Menu...')
+
+def list_example():
     print
