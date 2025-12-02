@@ -252,7 +252,7 @@ def string_concatenation_with_variables():
     clear = input('Press ENTER to return to the Main Menu...')
 
 def tuple():
-    print('---------------- Example of tuple ----------------')
+    print('---------------- Example of tuple -----------------')
     print('---------------------------------------------------')
     print('fruits = ("apple", "orange", "grapes", "cherry")')
     print('print(fruits)')
@@ -282,4 +282,24 @@ def simple_condi_statements():
 def logical_condi_statements():
     print('--- Example of logical conditional statements ---')
     print('-------------------------------------------------')
-    
+    print('score = int(input("Enter your score: "))')
+    print('if score >= 90:')
+    print('    print("Grade: A")')
+    print('elif score >= 80:')
+    print('    print("Grade: B")')
+    print('else:')
+    print('    print("Grade: C or below")')
+    print('Output:')
+    score = int(input("Enter your score: "))
+    if score >= 90:
+        print("Grade: A")
+    elif score >= 80:
+        print("Grade: B")
+    else:
+        print("Grade: C or below")
+    print('-------------------------------------------------')
+    clear = input('Press ENTER to return to the Main Menu...')
+
+
+
+
