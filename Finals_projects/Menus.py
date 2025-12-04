@@ -179,8 +179,7 @@ def Main_Menu():
         print("4. Conditionals")
         print("5. Functions")
         print('6. Lists')
-        print('7. Dictionaries')
-        print('8. Others')
+        print('7. Others')
         print('0. Exit')
         print('----------------------------------------------')
         choice = input("Enter your choice: ")
@@ -445,5 +444,91 @@ def function_example():
     print('------------------------------------')
     clear = input('Press ENTER to return to the Main Menu...')
 
+#List
 def list_example():
-    print
+    print('------------ List Example ------------')
+    print('--------------------------------------')
+    print('cars = ["audi","ferrari", "mclaren" ]')
+    print('print(cars)')
+    print()
+    print('Output')
+    cars = ["audi","ferrari", "mclaren" ]
+    print(cars)
+    print('---------------------------------------')
+    clear = input('Press ENTER to return to the Main Menu...')
+
+def editing_lists():
+    print('----------------------- Editing list -----------------------')
+    print('------------------------------------------------------------')
+    print('months = ["jan", "feb", "mar", "apr", "may", "jun", "jul"]')
+    print('months[1] = "february" # changes the element at index 1 ')
+    print('print(months)')
+    print('months.append("aug") #adds elements to the end of the list')
+    print('print(months)')
+    print('months.pop() #removes the last element')
+    print('print(months)')
+    print('list = len(months) #determines how many items within the list')
+    print('print("Length of list:", list) ')
+    print('months.sort() # sorts the list from low to high')
+    print('print("Sorted list:", months)')
+    print()
+    print('Output:')
+    months = ["jan", "feb", "mar", "apr", "may", "jun", "jul"]
+    print(months)
+
+    months[1] = 'february'
+    print(months)
+
+
+    months.append("aug")
+    print(months)
+
+
+    months.pop()
+    print(months)
+
+    months.remove("mar")
+    print(months)
+
+    months.insert(4, "new")
+    print(months)
+
+    list = len(months)
+    print("Length of list:", list)
+
+    months.sort()
+    print("Sorted list:", months)
+    print('------------------------------------------------------------')
+    clear = input('Press ENTER to return to the Main Menu...')
+
+#arithmetic example
+def operators_example():
+    print('------------- Arithmetric Operators -------------')
+    print('-------------------------------------------------')
+    print('a = input("Put any number here: ")')
+    print('b = input("Put any number here: ")')
+    print()
+    print('print(f"Addition: {a + b}")')
+    print('print(f"Subtraction: {a - b}")')
+    print('print(f"Multiplication: {a * b}")')
+    print('print(f"Division: {a / b}")')
+    print('print(f"Modulus: {a % b}")')
+    print('print(f"Exponentiation: {a ** b}")')
+    print()
+    print('Output:')
+    a = input("Put any number here: ") 
+    b = input("Put any number here: ")
+    print()
+    print(f"Addition: {a + b}")
+    print(f"Subtraction: {a - b}")
+    print(f"Multiplication: {a * b}")
+    print(f"Division: {a / b}")
+    print(f"Modulus: {a % b}")
+    print(f"Exponentiation: {a ** b}")
+    print('-------------------------------------------------')
+    clear = input('Press ENTER to return to the Main Menu...')
+
+def temperatures():
+    print('--- Temperature Calculator ---')
+    print('------------------------------')
+    
