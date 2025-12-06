@@ -160,8 +160,8 @@ def load_lesson(lesson_key):
         print(f"Error: Lesson '{lesson_key}' not found in templates.")
         return
 
-    # Create the LessonActivity instance with imported data
-    activity = LessonActivity(
+    # Create the file_opener instance with imported data
+    activity = file_opener(
         lesson_name=lesson_key,
         template_code=lesson_data["code"],
         expected_output=lesson_data["expected"]
@@ -184,20 +184,18 @@ def Main_Menu():
         print('----------------------------------------------')
         choice = input("Enter your choice: ")
         if choice == '1':
-            pass
+            submenu.printing_menu()
         elif choice == '2':
-            pass
+            submenu.variables_menu()
         elif choice == '3':
-            pass
+            submenu.loops_menu()
         elif choice == '4':
-            pass
+            submenu.conditionals_menu()
         elif choice == '5':
-            pass
+            submenu.functions_menu()
         elif choice == '6':
-            pass
+            submenu.lists_menu()
         elif choice == '7':
-            pass
-        elif choice == '8':
             pass
         elif choice == '0':
             print("Exiting the program. Goodbye!")
@@ -248,6 +246,18 @@ def string_concatenation_with_variables():
     full_name = first_name + ' ' + last_name
     print(full_name)
     print('------------------------------------------------------')
+    clear = input('Press ENTER to return to the Main Menu...')
+
+def variable_assignment():
+    print('------------- Example of variable assignment -------------')
+    print('----------------------------------------------------------')
+    print("# Assign the result of 7 + 3 to a variable named 'answer'")
+    print("answer = 7 + 3")
+    print("print(answer)")
+    print('Output:')
+    answer = 7 + 3
+    print(answer)
+    print('----------------------------------------------------------')
     clear = input('Press ENTER to return to the Main Menu...')
 
 def tuple():
@@ -529,6 +539,361 @@ def operators_example():
     clear = input('Press ENTER to return to the Main Menu...')
 
 def temperatures():
-    print('--- Temperature Calculator ---')
-    print('------------------------------')
+    print('------------------------------ Temperature ------------------------------')
+    print('-------------------------------------------------------------------------')
+    print('F = float(input("Enter Temperature in FARENHEIT: "))')
+    print("C = ((F - 32)*5)/9")
+    print("round(C,2)")
+    print('print(f"{F} degrees in Farenheit converted to Celsius is {C}")')
+    print('C = eval(input("Enter Temperature in CELSIUS: "))')
+    print("F = (C * 9/5) + 32")
+    print('print(f"{C} degrees in Celsius converted to Farenheit is {round(F,2)}")')
+    print()
+    print("Output:")
+    F = float(input("Enter Temperature in FARENHEIT: "))
+    C = ((F - 32) * 5) / 9
+    round(C, 2)
+
+    print(f"{F} degrees in Farenheit converted to Celsius is {C}")
+
+    C = eval(input("Enter Temperature in CELSIUS: "))
+    F = (C * 9 / 5) + 32
+
+    print(f"{C} degrees in Celsius converted to Farenheit is {round(F,2)}")
+    print('------------------------------------------------------------------------')
+    clear = input('Press ENTER to return to the Main Menu...')
+
+def temp_calc():
+    print("--------- Simple Calculator ---------")
+    print("-------------------------------------")
+    print(" 1. Temperature Conversion")
+    print(" 2. Arithmetic Operations")
+    print("-------------------------------------")
+    choice = input("Enter your choice: ")
+    os.system("cls")
+
+    if choice == "1":
+        print("------- Temperature Conversion -------")
+        print("--------------------------------------")
+        print("1. Fahrenheit to Celsius")
+        print("2. Celsius to Fahrenheit")
+        print("--------------------------------------")
+        temp_choice = input("Enter your choice: ")
+
+        if temp_choice == "1":
+            print('------------ Fahrenheit to Celsius Conversion ------------')
+            print("----------------------------------------------------------")
+            F = eval(input("Enter Temperature in Fahrenheit: "))
+            C = ((F - 32) * 5) / 9
+            print(f"{F} degrees Fahrenheit is {round(C, 2)} degrees Celsius.")
+            print("----------------------------------------------------------")
+            clear = input('Press ENTER to return to the Main Menu...')
+            os.system("cls")
+
+        elif temp_choice == "2":
+            print('------------- Celsius to Fahrenheit Conversion -------------')
+            print("------------------------------------------------------------")
+            C = eval(input("Enter Temperature in Celsius: "))
+            F = (C * 9 / 5) + 32
+            print(f"{C} degrees Celsius is {round(F, 2)} degrees Fahrenheit.")
+            print("------------------------------------------------------------")
+            clear = input('Press ENTER to return to the Main Menu...')
+            os.system("cls")
+
+        else:
+            print("Invalid choice. Please enter 1 or 2.")
+
+    elif choice == "2":
+        print("------- Arithmetic Operations -------")
+        print("-------------------------------------")
+        print(" 1. Add")
+        print(" 2. Subtract")
+        print(" 3. Multiply")
+        print(" 4. Divide")
+        print("-------------------------------------")
+        operation_choice = input("Enter your choice: ")
+
+        num1 = eval(input("Enter first number: "))
+        num2 = eval(input("Enter second number: "))
+
+        if operation_choice == "1":
+            result = num1 + num2
+            print(f"{num1} + {num2} = {result}")
+            clear = input('Press ENTER to return to the Main Menu...')
+            os.system("cls")
+
+        elif operation_choice == "2":
+            result = num1 - num2
+            print(f"{num1} - {num2} = {result}")
+            clear = input('Press ENTER to return to the Main Menu...')
+            os.system("cls")
+
+        elif operation_choice == "3":
+            result = num1 * num2
+            print(f"{num1} * {num2} = {result}")
+            clear = input('Press ENTER to return to the Main Menu...')
+            os.system("cls")
+
+        elif operation_choice == "4":
+            if num2 != 0:
+                result = num1 / num2
+                print(f"{num1} / {num2} = {result}")
+                clear = input('Press ENTER to return to the Main Menu...')
+                os.system("cls")
+            else:
+                print("Error! Division by zero is not allowed.")
+                clear = input('Press ENTER to return to the Main Menu...')
+        else:
+            print("\nInvalid choice. Please enter 1, 2, 3, or 4.")
+            clear = input('Press ENTER to return to the Main Menu...')
+    else:
+        print("Invalid input! Please enter 1 or 2.")
+        clear = input('Press ENTER to return to the Main Menu...')
+
+class submenu:
+    def printing_menu():
+        while True:
+            print('--------------------------------- Printing Menu -----------------------------------')
+            print('-----------------------------------------------------------------------------------')
+            print()
+            print(' In Python, print() is a built-in function used to display\
+                    \noutput to the console (standard output device). \
+                    \nIt is a fundamental tool for programmers to show text messages, \
+                    \nvariable values or the results of operations during program execution or debugging.')
+            print()
+            print('------------------------------------------------------------------------------------')
+            print('1. Basic Printing')
+            print('2. String Formatting')
+            print('3. Lesson Activity')
+            print('0. Return to Main Menu')
+            print('------------------------------------------------------------------------------------')
+            choice = input('Enter your choice: ')
+            os.system('cls')
+            if choice == '1':
+                basic_printing()
+            elif choice == '2':
+                string_formatting()
+            elif choice == '3':
+                # Let the user choose which printing lesson to load
+                print('\nSelect a printing lesson activity:')
+                print('1. Basic')
+                print('2. Formatting')
+                subchoice = input('Enter your choice: ')
+                if subchoice == '1':
+                    load_lesson("Printing - Basic")
+                elif subchoice == '2':
+                    load_lesson("Printing - Formatting")
+                else:
+                    print('Invalid printing lesson choice.')
+            elif choice == '0':
+                break
+            else:
+                print('Invalid choice. Please try again.')
     
+    def variables_menu():
+        print('------------------------------- Variables Menu -----------------------------------')
+        print('----------------------------------------------------------------------------------')
+        print()
+        print(' Variables in Python are used to store data values. \
+                \nThey act as containers for data that can be referenced and manipulated throughout a program. \
+                \nVariables are created by assigning a value to a name using the equals sign (=). \
+                \nThe value can be of various data types, such as integers, floats, strings, lists, etc.')
+        print()
+        print('----------------------------------------------------------------------------------')
+        print('1. String Concatenation with Variables')
+        print('2. Variable Assignment')
+        print('3. Lesson Activity')
+        print('0. Return to Main Menu')
+        print('----------------------------------------------------------------------------------')
+        choice = input('Enter your choice: ')
+        os.system('cls')
+        if choice == '1':
+            string_concatenation_with_variables()
+        elif choice == '2':
+            variable_assignment()
+        elif choice == '3':
+            # Let the user choose which variable lesson to load
+            print('\nSelect a variable lesson activity:')
+            print('1. String Concatenation')
+            print('2. Assignment')
+            subchoice = input('Enter your choice: ')
+            if subchoice == '1':
+                load_lesson("Variables - String Concatenation")
+            elif subchoice == '2':
+                load_lesson("Variables - Assignment")
+            else:
+                print('Invalid variable lesson choice.')
+        elif choice == '0':
+            return
+        else:
+            print('Invalid choice. Please try again.')
+    
+    def loops_menu():
+        print('-------------------------------- Loops Menu -----------------------------------')
+        print('-------------------------------------------------------------------------------')
+        print()
+        print(' Loops in Python are used to execute a block of code repeatedly for a specified number of times or while a certain condition is met. \
+                \nThey help automate repetitive tasks and iterate over sequences like lists, tuples, or strings. \
+                \nThe two main types of loops in Python are for loops and while loops.')
+        print()
+        print('-------------------------------------------------------------------------------')
+        print('1. For Loop')
+        print('2. While Loop')
+        print('3. Nested Loops')
+        print('4. Lesson Activity')
+        print('0. Return to Main Menu')
+        print('-------------------------------------------------------------------------------')
+        choice = input('Enter your choice: ')
+        os.system('cls')
+        if choice == '1':
+            for_loop()
+        elif choice == '2':
+            while_loop()
+        elif choice == '3':
+            print('--- Nested Loops Menu ---')
+            print('1. Nested For Loop')
+            print('2. Nested While Loop')
+            nested_loop_choice = input('Enter your choice: ')
+            if nested_loop_choice == '1':
+                nested_for_loop()
+            elif nested_loop_choice == '2':
+                nested_while_loop()
+            else:
+                print('Invalid nested loop choice.')
+        elif choice == '4':
+            # Let the user choose which loop lesson to load
+            print('\nSelect a loop lesson activity:')
+            print('1. For Loop')
+            print('2. While Loop')
+            print('3. Nested For Loop')
+            print('4. Nested While Loop')
+            print('0. Return to Loops Menu')
+            subchoice = input('Enter your choice: ')
+            if subchoice == '1':
+                load_lesson("Loops - For Loop")
+            elif subchoice == '2':
+                load_lesson("Loops - While Loop")
+            elif subchoice == '3':
+                load_lesson("Loops - Nested For Loop")
+            elif subchoice == '4':
+                load_lesson("Loops - Nested While Loop")
+            else:
+                print('Invalid loop lesson choice.')
+        elif choice == '0':
+            return
+        else:
+            print('Invalid choice. Please try again.')
+    
+    def conditionals_menu():
+        print('----------------------------- Conditionals Menu ------------------------------')
+        print('-------------------------------------------------------------------------------')
+        print()
+        print(' Conditional statements in Python are used to perform different actions based on whether a certain condition is true or false. \
+                \nThey allow for decision-making in code, enabling the program to execute specific blocks of code depending on the evaluation of conditions. \
+                \nThe main conditional statements in Python are if, elif (else if), and else.')
+        print()
+        print('-------------------------------------------------------------------------------')
+        print('1. Simple Conditional Statements')
+        print('2. Logical Conditional Statements')
+        print('3. Nested Conditional Statements')
+        print('4. Lesson Activity')
+        print('0. Return to Main Menu')
+        print('-------------------------------------------------------------------------------')
+        choice = input('Enter your choice: ')
+        os.system('cls')
+        if choice == '1':
+            simple_condi_statements()
+        elif choice == '2':
+            logical_condi_statements()
+        elif choice == '3':
+            nested_condi_statement()
+        elif choice == '4':
+            # Let the user choose which conditional lesson to load
+            print('\nSelect a conditional lesson activity:')
+            print('1. Simple If-Else')
+            print('2. If-Elif-Else')
+            print('3. Nested If Statements')
+            subchoice = input('Enter your choice: ')
+            if subchoice == '1':
+                load_lesson("Conditionals - Simple If")
+            elif subchoice == '2':
+                load_lesson("Conditionals - If-Elif-Else")
+            elif subchoice == '3':
+                load_lesson("Conditionals - Nested If")
+            else:
+                print('Invalid conditional lesson choice.')
+        elif choice == '0':
+            return
+        else:
+            print('Invalid choice. Please try again.')
+    
+    def functions_menu():
+        print('----------------------------- Functions Menu ------------------------------')
+        print('---------------------------------------------------------------------------')
+        print()
+        print(' Functions in Python are reusable blocks of code that perform a specific task. \
+                \nThey help organize code, improve readability, and allow for code reuse. \
+                \nFunctions are defined using the def keyword, followed by the function name and parentheses. \
+                \nThey can take input parameters and return output values.')
+        print()
+        print('---------------------------------------------------------------------------')
+        print('1. Function Example')
+        print('2. Lesson Activity')
+        print('0. Return to Main Menu')
+        print('---------------------------------------------------------------------------')
+        choice = input('Enter your choice: ')
+        os.system('cls')
+        if choice == '1':
+            function_example()
+        elif choice == '2':
+            # Let the user choose which function lesson to load
+            print('\nSelect a function lesson activity:')
+            print('1. Basic Function')
+            subchoice = input('Enter your choice: ')
+            if subchoice == '1':
+                load_lesson("Functions - Basic Function")
+            else:
+                print('Invalid function lesson choice.')
+        elif choice == '0':
+            return
+        else:
+            print('Invalid choice. Please try again.')
+    def lists_menu():
+        print('------------------------------- Lists Menu -------------------------------')
+        print('-------------------------------------------------------------------------')
+        print()
+        print(' Lists in Python are ordered collections of items that can hold multiple values in a single variable. \
+                \nThey are mutable, meaning their contents can be changed after creation. \
+                \nLists can contain elements of different data types, including numbers, strings, and even other lists. \
+                \nThey are defined using square brackets [].')
+        print()
+        print('-------------------------------------------------------------------------')
+        print('1. List Example')
+        print('2. Editing Lists')
+        print('3. Lesson Activity')
+        print('0. Return to Main Menu')
+        print('-------------------------------------------------------------------------')
+        choice = input('Enter your choice: ')
+        os.system('cls')
+        if choice == '1':
+            list_example()
+        elif choice == '2':
+            editing_lists()
+        elif choice == '3':
+            # Let the user choose which list lesson to load
+            print('\nSelect a list lesson activity:')
+            print('1. Basic List')
+            print('2. Editing Lists')
+            subchoice = input('Enter your choice: ')
+            if subchoice == '1':
+                load_lesson("Lists - Basic")
+            elif subchoice == '2':
+                load_lesson("Lists - Editing")
+            else:
+                print('Invalid list lesson choice.')
+        elif choice == '0':
+            return
+        else:
+            print('Invalid choice. Please try again.')
+        
+Main_Menu()
